@@ -7,9 +7,9 @@ Alpha Vantage Stock Market API: https://www.alphavantage.co
 local host: http://127.0.0.1:5000
 
 external packages to install in terminal of PyCharm (might need to use sudo -H in front of these commands to bypass permissions)
-pip install alpha_vantage (from https://github.com/RomelTorres/alpha_vantage)
-pip install flask (for webserver)
-pip install pandas (for plotting graphs)
+pip install alpha_vantage (stock market API wrapper from https://github.com/RomelTorres/alpha_vantage)
+pip install flask (micro web framework)
+pip install pandas (data analysis library)
 pip install matplotlib (for plotting graphs)
 
 

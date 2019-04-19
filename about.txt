@@ -7,13 +7,20 @@ Alpha Vantage Stock Market API: https://www.alphavantage.co
 local host: http://127.0.0.1:5000
 
 external packages to install in terminal of PyCharm (might need to use sudo -H in front of these commands to bypass permissions)
-pip install alpha_vantage (stock market API wrapper from https://github.com/RomelTorres/alpha_vantage)
-pip install flask (micro web framework)
-pip install pandas (data analysis library)
-pip install matplotlib (for plotting graphs)
+these packages are stored within venv/lib/python3.7/site-packages
+
+    pip install alpha_vantage (stock market API wrapper)
+        https://github.com/RomelTorres/alpha_vantage
+        https://github.com/RomelTorres/av_example
+        https://alpha-vantage.readthedocs.io/en/latest/
+
+    pip install flask (micro web framework)
+
+    pip install pandas (data analysis library)
+
+    pip install matplotlib (for plotting graphs)
 
 
 HTML files are within the templates folder in the same directory as the python file
-
 
 

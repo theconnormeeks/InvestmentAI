@@ -14,13 +14,13 @@ def _request():
     data, meta_data = ts.get_intraday(symbol='MSFT', interval='1min', outputsize='full')
 
     #Pandas Plots
-    data['4. close'].plot()
-    plt.title('Intraday Times Series for the MSFT stock (1 min)')
-    plt.savefig('templates/my_plot.png')
-    plt.show()
+    # data['4. close'].plot()
+    # plt.title('Intraday Times Series for the MSFT stock (1 min)')
+    # plt.savefig('templates/my_plot.png')
+    # plt.show()
 
 
-    return render_template('Alpha_Vantage_Test.html', data=data)
+    return render_template('index.html', data=data)
 
 
 if __name__ == '__main__':

@@ -32,3 +32,6 @@ Or just run pip install --proxy http://user:password@proxyserver:port flask
     FedEx username and password
     server:port = west.proxy.fedex.com:3128
 IGNORE the two venv directory files (venv for mac and venv for windows) - you will have to pip install on each platform
+
+So, on windows, I think the FedEx proxy is limiting me. I keep running into:
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='www.alphavantage.co', port=443): Max retries exceeded with url:...

@@ -8,8 +8,34 @@ from alpha_vantage.foreignexchange import ForeignExchange
 import matplotlib.pyplot as plt
 from pprint import pprint
 
+import requests
+import json
+
 QUERY_URL = "https://www.alphavantage.co/query?function={REQUEST_TYPE}&apikey={KEY}&symbol={SYMBOL}"
 API_KEY = "571I2OGDRCSK2904"
+
+
+
+
+# Without API python wrapper:
+API_URL = "https://www.alphavantage.co/query"
+symbols = ['QCOM',"INTC","PDD"]
+
+for symbol in symbols:
+        data = { "function": "TIME_SERIES_INTRADAY",
+        "symbol": symbol,
+        "interval" : "60min",
+        "datatype": "json",
+        "apikey": API_KEY }
+        response = requests.get(API_URL, data)
+        data = response.json()
+        print(symbol)
+        a = (data['Time Series (60min)'])
+        keys = (a.keys())
+        for key in keys:
+                print(a[key]['2. high'] + " " + a[key]['5. volume'])
+
+# With API python wrapper:
 
 # # Time series
 # ts = TimeSeries(key=API_KEY, output_format='pandas')

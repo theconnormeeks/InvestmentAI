@@ -10,17 +10,13 @@ external packages to install in terminal of PyCharm (might need to use sudo -H i
 Mac - these packages are stored within venv/lib/python3.7/site-packages
 Windows - these packages are stored within venv/Windows/lib/site-packages
 
-    pip install alpha_vantage (stock market API wrapper)
-        https://github.com/RomelTorres/alpha_vantage
-        https://github.com/RomelTorres/av_example
-        https://alpha-vantage.readthedocs.io/en/latest/
-
     pip install flask (micro web framework)
-
     pip install pandas (data analysis library)
-
     pip install matplotlib (for plotting graphs)
-
+    pip install alpha_vantage (stock market API wrapper)
+            https://github.com/RomelTorres/alpha_vantage
+            https://github.com/RomelTorres/av_example
+            https://alpha-vantage.readthedocs.io/en/latest/
 
 HTML files are within the templates folder in the same directory as the python file
 
@@ -33,5 +29,6 @@ Or just run pip install --proxy http://user:password@proxyserver:port flask
     server:port = west.proxy.fedex.com:3128
 IGNORE the two venv directory files (venv for mac and venv for windows) - you will have to pip install on each platform
 
-So, on windows, I think the FedEx proxy is limiting me. I keep running into:
-requests.exceptions.ConnectionError: HTTPSConnectionPool(host='www.alphavantage.co', port=443): Max retries exceeded with url:...
+Resolved the WinError 10061 - No Connection Could be made (max retries exceeded with url)
+    Internet properties -> connections -> LAN Settings
+    Use a proxy server for your LAN (fillout info), and bypass proxy server for local address

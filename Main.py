@@ -11,29 +11,29 @@ from pprint import pprint
 QUERY_URL = "https://www.alphavantage.co/query?function={REQUEST_TYPE}&apikey={KEY}&symbol={SYMBOL}"
 API_KEY = "571I2OGDRCSK2904"
 
-# Time series
-ts = TimeSeries(key=API_KEY, output_format='pandas')
-data, meta_data = ts.get_intraday(symbol='MSFT', interval='1min', outputsize='full')
-data['4. close'].plot()
-plt.title('Intraday Times Series for the MSFT stock (1 min)')
-# plt.savefig('templates/my_plot.png')
-plt.show()
+# # Time series
+# ts = TimeSeries(key=API_KEY, output_format='pandas')
+# data, meta_data = ts.get_intraday(symbol='MSFT', interval='1min', outputsize='full')
+# data['4. close'].plot()
+# plt.title('Intraday Times Series for the MSFT stock (1 min)')
+# # plt.savefig('templates/my_plot.png')
+# plt.show()
 
-# Technical Indicators
-ti = TechIndicators(key=API_KEY, output_format='pandas')
-data2, meta_data2 = ti.get_bbands(symbol='MSFT', interval='60min', time_period=60)
-data2.plot()
-plt.title('BBbands indicator for  MSFT stock (60 min)')
-plt.show()
-
-# Sector Performance
-sp = SectorPerformances(key=API_KEY, output_format='pandas')
-data3, meta_data3 = sp.get_sector()
-data3['Rank A: Real-Time Performance'].plot(kind='bar')
-plt.title('Real Time Performance (%) per Sector')
-plt.tight_layout()
-plt.grid()
-plt.show()
+# # Technical Indicators
+# ti = TechIndicators(key=API_KEY, output_format='pandas')
+# data2, meta_data2 = ti.get_bbands(symbol='MSFT', interval='60min', time_period=60)
+# data2.plot()
+# plt.title('BBbands indicator for  MSFT stock (60 min)')
+# plt.show()
+#
+# # Sector Performance
+# sp = SectorPerformances(key=API_KEY, output_format='pandas')
+# data3, meta_data3 = sp.get_sector()
+# data3['Rank A: Real-Time Performance'].plot(kind='bar')
+# plt.title('Real Time Performance (%) per Sector')
+# plt.tight_layout()
+# plt.grid()
+# plt.show()
 
 # # Crypto Currencies
 # cc = CryptoCurrencies(key=API_KEY, output_format='pandas')

@@ -7,7 +7,8 @@ Alpha Vantage Stock Market API: https://www.alphavantage.co
 local host: http://127.0.0.1:5000
 
 external packages to install in terminal of PyCharm (might need to use sudo -H in front of these commands to bypass permissions)
-these packages are stored within venv/lib/python3.7/site-packages
+Mac - these packages are stored within venv/lib/python3.7/site-packages
+Windows - these packages are stored within venv/Windows/lib/site-packages
 
     pip install alpha_vantage (stock market API wrapper)
         https://github.com/RomelTorres/alpha_vantage

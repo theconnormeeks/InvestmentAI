@@ -30,3 +30,4 @@ Setup proxy in settings
 Or just run pip install --proxy http://user:password@proxyserver:port flask
     FedEx username and password
     server:port = west.proxy.fedex.com:3128
+IGNORE the two venv directory files (venv for mac and venv for windows) - you will have to pip install on each platform

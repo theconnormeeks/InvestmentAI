@@ -37,8 +37,6 @@ for i in data:
         print(data[i][j]) # values for open, high, low, close
 
 
-
-
 #data ouput
 # pprint(meta_data)
 # pprint(data)

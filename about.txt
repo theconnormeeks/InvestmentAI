@@ -23,4 +23,10 @@ these packages are stored within venv/lib/python3.7/site-packages
 
 HTML files are within the templates folder in the same directory as the python file
 
-
+WINDOWS:
+Create a new Venv for Windows settings
+Set interpreter to Windows venv path
+Setup proxy in settings
+Or just run pip install --proxy http://user:password@proxyserver:port flask
+    FedEx username and password
+    server:port = west.proxy.fedex.com:3128

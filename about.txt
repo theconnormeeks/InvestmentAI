@@ -27,10 +27,11 @@ Setup proxy in settings
 Or just run pip install --proxy http://user:password@proxyserver:port flask
     FedEx username and password
     server:port = west.proxy.fedex.com:3128
-IGNORE the two venv directory files (venv for mac and venv for windows) - you will have to pip install on each platform
 
 Resolved the WinError 10061 - No Connection Could be made (max retries exceeded with url)
     Internet properties -> connections -> LAN Settings
     Use a proxy server for your LAN (fillout info), and bypass proxy server for local address
 
 NOTE: have to update the python interpreter every time you make changes on a different Operating system (Mac vs Windows)
+    Mac: venv/bin/python
+    Windows: ???

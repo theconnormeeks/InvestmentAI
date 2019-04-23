@@ -36,6 +36,7 @@ for i in data:
         print(j) # headers for open, high, low, close
         print(data[i][j]) # values for open, high, low, close
 
+'''NOTE: unignore the Venv windows files for Git VCS'''
 
 #data ouput
 # pprint(meta_data)
@@ -45,30 +46,30 @@ for i in data:
 #-----------------------------------------------------
 # Plots:
 
-# # Time series
-# ts = TimeSeries(key=API_KEY, output_format='pandas')
-# data, meta_data = ts.get_intraday(symbol='MSFT', interval='1min', outputsize='full')
-# data['4. close'].plot()
-# plt.title('Intraday Times Series for the MSFT stock (1 min)')
-# # plt.savefig('templates/my_plot.png')
-# plt.show()
-#
-# # Technical Indicators
-# ti = TechIndicators(key=API_KEY, output_format='pandas')
-# data2, meta_data2 = ti.get_bbands(symbol='MSFT', interval='60min', time_period=60)
-# data2.plot()
-# plt.title('BBbands indicator for  MSFT stock (60 min)')
-# plt.show()
-#
-# # Sector Performance
-# sp = SectorPerformances(key=API_KEY, output_format='pandas')
-# data3, meta_data3 = sp.get_sector()
-# data3['Rank A: Real-Time Performance'].plot(kind='bar')
-# plt.title('Real Time Performance (%) per Sector')
-# plt.tight_layout()
-# plt.grid()
-# plt.show()
-#
+# Time series
+ts = TimeSeries(key=API_KEY, output_format='pandas')
+data, meta_data = ts.get_intraday(symbol='MSFT', interval='1min', outputsize='full')
+data['4. close'].plot()
+plt.title('Intraday Times Series for the MSFT stock (1 min)')
+# plt.savefig('templates/my_plot.png')
+plt.show()
+
+# Technical Indicators
+ti = TechIndicators(key=API_KEY, output_format='pandas')
+data2, meta_data2 = ti.get_bbands(symbol='MSFT', interval='60min', time_period=60)
+data2.plot()
+plt.title('BBbands indicator for  MSFT stock (60 min)')
+plt.show()
+
+# Sector Performance
+sp = SectorPerformances(key=API_KEY, output_format='pandas')
+data3, meta_data3 = sp.get_sector()
+data3['Rank A: Real-Time Performance'].plot(kind='bar')
+plt.title('Real Time Performance (%) per Sector')
+plt.tight_layout()
+plt.grid()
+plt.show()
+
 # # Crypto Currencies
 # cc = CryptoCurrencies(key=API_KEY, output_format='pandas')
 # data4, meta_data4 = cc.get_digital_currency_intraday(symbol='BTC', market='CNY')
@@ -77,7 +78,7 @@ for i in data:
 # plt.title('Intraday value for bitcoin (BTC)')
 # plt.grid()
 # plt.show()
-#
+
 # # Foreign Exchange
 # cc = ForeignExchange(key=API_KEY)
 # # There is no metadata in this call

@@ -32,3 +32,5 @@ IGNORE the two venv directory files (venv for mac and venv for windows) - you wi
 Resolved the WinError 10061 - No Connection Could be made (max retries exceeded with url)
     Internet properties -> connections -> LAN Settings
     Use a proxy server for your LAN (fillout info), and bypass proxy server for local address
+
+NOTE: have to update the python interpreter every time you make changes on a different Operating system (Mac vs Windows)
